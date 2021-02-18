@@ -1,0 +1,44 @@
+﻿@model Wyrobot.Web.Models.LevelReward
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>LevelReward</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="GuildId" class="control-label"></label>
+                <input asp-for="GuildId" class="form-control" />
+                <span asp-validation-for="GuildId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequiredLevel" class="control-label"></label>
+                <input asp-for="RequiredLevel" class="form-control" />
+                <span asp-validation-for="RequiredLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleId" class="control-label"></label>
+                <input asp-for="RoleId" class="form-control" />
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,180 @@
+﻿@model IEnumerable<Wyrobot.Web.Models.ServerSettings>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GuildName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ModerationRoles)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.BannedWords)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CapsPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AutoModerationEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MuteAfter3Warn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WelcomeEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WelcomeChannelId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WelcomeMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogsEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogsChannelId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogMessages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogPunishments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogInvites)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogVoiceState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogChannels)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogUsers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogRoles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogServer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LevelingEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Multiplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LevelingMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoungesEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatCmdEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogCmdEnabled)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GuildName)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.ModerationRoles)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.BannedWords)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CapsPercentage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AutoModerationEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MuteAfter3Warn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WelcomeEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WelcomeChannelId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WelcomeMessage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogsEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogsChannelId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogMessages)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogPunishments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogInvites)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogVoiceState)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogChannels)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogUsers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogRoles)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogServer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LevelingEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Multiplier)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LevelingMessage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoungesEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CatCmdEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogCmdEnabled)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.GuildId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.GuildId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.GuildId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,180 @@
+﻿@model Wyrobot.Web.Models.ServerSettings
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ServerSettings</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GuildId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GuildId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GuildName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GuildName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MuteRoleId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MuteRoleId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ModerationRoles)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ModerationRoles)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BannedWords)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BannedWords)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CapsPercentage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CapsPercentage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AutoModerationEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AutoModerationEnabled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MuteAfter3Warn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MuteAfter3Warn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WelcomeEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WelcomeEnabled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WelcomeChannelId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WelcomeChannelId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WelcomeMessage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WelcomeMessage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogsEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogsEnabled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogsChannelId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogsChannelId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogMessages)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogMessages)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogPunishments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogPunishments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogInvites)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogInvites)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogVoiceState)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogVoiceState)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogChannels)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogChannels)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogUsers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogUsers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogRoles)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogRoles)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogServer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogServer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LevelingEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LevelingEnabled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Multiplier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Multiplier)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LevelingMessage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LevelingMessage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoungesEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoungesEnabled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CatCmdEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CatCmdEnabled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DogCmdEnabled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DogCmdEnabled)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.GuildId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

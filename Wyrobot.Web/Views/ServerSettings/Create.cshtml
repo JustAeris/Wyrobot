@@ -1,0 +1,163 @@
+﻿@model Wyrobot.Web.Models.ServerSettings
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ServerSettings</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GuildId" class="control-label"></label>
+                <input asp-for="GuildId" class="form-control" />
+                <span asp-validation-for="GuildId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuildName" class="control-label"></label>
+                <input asp-for="GuildName" class="form-control" />
+                <span asp-validation-for="GuildName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MuteRoleId" class="control-label"></label>
+                <input asp-for="MuteRoleId" class="form-control" />
+                <span asp-validation-for="MuteRoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModerationRoles" class="control-label"></label>
+                <input asp-for="ModerationRoles" class="form-control" />
+                <span asp-validation-for="ModerationRoles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BannedWords" class="control-label"></label>
+                <input asp-for="BannedWords" class="form-control" />
+                <span asp-validation-for="BannedWords" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CapsPercentage" class="control-label"></label>
+                <input asp-for="CapsPercentage" class="form-control" />
+                <span asp-validation-for="CapsPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AutoModerationEnabled" /> @Html.DisplayNameFor(model => model.AutoModerationEnabled)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MuteAfter3Warn" /> @Html.DisplayNameFor(model => model.MuteAfter3Warn)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="WelcomeEnabled" /> @Html.DisplayNameFor(model => model.WelcomeEnabled)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="WelcomeChannelId" class="control-label"></label>
+                <input asp-for="WelcomeChannelId" class="form-control" />
+                <span asp-validation-for="WelcomeChannelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WelcomeMessage" class="control-label"></label>
+                <input asp-for="WelcomeMessage" class="form-control" />
+                <span asp-validation-for="WelcomeMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogsEnabled" /> @Html.DisplayNameFor(model => model.LogsEnabled)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogsChannelId" class="control-label"></label>
+                <input asp-for="LogsChannelId" class="form-control" />
+                <span asp-validation-for="LogsChannelId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogMessages" /> @Html.DisplayNameFor(model => model.LogMessages)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogPunishments" /> @Html.DisplayNameFor(model => model.LogPunishments)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogInvites" /> @Html.DisplayNameFor(model => model.LogInvites)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogVoiceState" /> @Html.DisplayNameFor(model => model.LogVoiceState)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogChannels" /> @Html.DisplayNameFor(model => model.LogChannels)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogUsers" /> @Html.DisplayNameFor(model => model.LogUsers)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogRoles" /> @Html.DisplayNameFor(model => model.LogRoles)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogServer" /> @Html.DisplayNameFor(model => model.LogServer)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LevelingEnabled" /> @Html.DisplayNameFor(model => model.LevelingEnabled)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Multiplier" class="control-label"></label>
+                <input asp-for="Multiplier" class="form-control" />
+                <span asp-validation-for="Multiplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LevelingMessage" class="control-label"></label>
+                <input asp-for="LevelingMessage" class="form-control" />
+                <span asp-validation-for="LevelingMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LoungesEnabled" /> @Html.DisplayNameFor(model => model.LoungesEnabled)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CatCmdEnabled" /> @Html.DisplayNameFor(model => model.CatCmdEnabled)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DogCmdEnabled" /> @Html.DisplayNameFor(model => model.DogCmdEnabled)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
